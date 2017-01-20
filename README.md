@@ -10,6 +10,17 @@ Display results by calling a class function
 Not thread save, but if you want to do performance tests for such a program,
 you should not be looking at a timer with 'simple' in it's name.
 
+```python
+import time
+from simplepytimer import MultiTimer
+
+MultiTimer("start")
+time.sleep(0.1)
+MultiTimer("end")
+
+MultiTimer.print_timings()
+```
+
 ## Features
 1. Construct the object with only a string and create a measure point
 2. Optional jump in level for displaying results
